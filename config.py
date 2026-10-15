@@ -55,3 +55,6 @@ c.colors.tabs.odd.bg = "rgba(40, 40, 40, 150)"
 c.colors.tabs.even.bg = "rgba(40, 40, 40, 150)"
 c.colors.tabs.selected.odd.bg = "rgba(90, 90, 90, 200)"
 c.colors.tabs.selected.even.bg = "rgba(90, 90, 90, 200)"
+
+# No title bar. Also lets the transparent tab bar show the desktop on macOS.
+c.window.hide_decoration = True
