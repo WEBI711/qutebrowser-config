@@ -44,3 +44,14 @@ c.messages.timeout = 3000
 
 # Show the bottom bar only while typing a command, hinting, etc.
 c.statusbar.show = "in-mode"
+
+# Taller, see-through tab bar. window.transparent lets the desktop show
+# through; it applies only to windows opened after a restart.
+c.window.transparent = True
+c.tabs.padding = {"top": 5, "bottom": 5, "left": 8, "right": 8}
+c.tabs.indicator.padding = {"top": 3, "bottom": 3, "left": 0, "right": 4}
+c.colors.tabs.bar.bg = "rgba(0, 0, 0, 0)"
+c.colors.tabs.odd.bg = "rgba(40, 40, 40, 150)"
+c.colors.tabs.even.bg = "rgba(40, 40, 40, 150)"
+c.colors.tabs.selected.odd.bg = "rgba(90, 90, 90, 200)"
+c.colors.tabs.selected.even.bg = "rgba(90, 90, 90, 200)"
