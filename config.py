@@ -41,3 +41,6 @@ c.downloads.location.directory = "~/Downloads"
 # Hide finished downloads and bottom-bar messages after 3 seconds.
 c.downloads.remove_finished = 3000
 c.messages.timeout = 3000
+
+# Show the bottom bar only while typing a command, hinting, etc.
+c.statusbar.show = "in-mode"
