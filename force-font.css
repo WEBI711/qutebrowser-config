@@ -1,0 +1,4 @@
+/* Force one font on every page. Skip common icon fonts so icons stay icons. */
+*:not([class*="icon"]):not([class*="Icon"]):not(i):not(.material-icons):not(.material-symbols-outlined):not([class*="fa-"]) {
+  font-family: "JetBrainsMono Nerd Font", monospace !important;
+}

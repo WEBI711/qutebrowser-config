@@ -8,7 +8,13 @@ config.load_autoconfig(True)
 
 # Fonts
 c.fonts.default_family = ["JetBrainsMono Nerd Font", "JetBrains Mono", "monospace"]
-c.fonts.web.family.fixed = "JetBrains Mono"
+c.fonts.web.family.fixed = "JetBrainsMono Nerd Font"
+# Used only on pages that do not pick their own font.
+c.fonts.web.family.standard = "JetBrainsMono Nerd Font"
+c.fonts.web.family.sans_serif = "JetBrainsMono Nerd Font"
+c.fonts.web.family.serif = "JetBrainsMono Nerd Font"
+# Force that font on every page, even ones that pick their own.
+c.content.user_stylesheets = ["force-font.css"]
 
 # Search: plain text in the address bar searches Google.
 c.url.searchengines = {"DEFAULT": "https://www.google.com/search?q={}"}
