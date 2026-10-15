@@ -1,6 +1,8 @@
 # qutebrowser config — shared between macOS and Linux.
 # Docs: https://qutebrowser.org/doc/help/settings.html
 
+import sys
+
 # Keep settings changed with :set, but this file wins on conflicts.
 config.load_autoconfig(True)
 
@@ -56,5 +58,6 @@ c.colors.tabs.even.bg = "rgba(40, 40, 40, 150)"
 c.colors.tabs.selected.odd.bg = "rgba(90, 90, 90, 200)"
 c.colors.tabs.selected.even.bg = "rgba(90, 90, 90, 200)"
 
-# No title bar. Also lets the transparent tab bar show the desktop on macOS.
-c.window.hide_decoration = True
+# No title bar on Linux. macOS keeps it: a borderless macOS window cannot
+# be resized by window managers such as OmniWM.
+c.window.hide_decoration = sys.platform != "darwin"
