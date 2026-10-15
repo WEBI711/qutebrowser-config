@@ -21,6 +21,17 @@ c.content.headers.user_agent = (
     "{upstream_browser_key}/{upstream_browser_version_short} Safari/{webkit_version}"
 )
 
+# Google search shows "unusual traffic" CAPTCHAs to QtWebEngine's older
+# Chromium version, so claim the current Chrome on Google pages.
+# Bump the version when Chrome updates. Keep this above the accounts rule:
+# the last matching pattern wins.
+config.set(
+    "content.headers.user_agent",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "*://*.google.com/*",
+)
+
 # Google refuses to sign in from QtWebEngine ("This browser may not be secure").
 # A Firefox user agent on the login page alone gets past that check.
 config.set(
