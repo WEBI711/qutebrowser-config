@@ -37,3 +37,7 @@ config.bind(",a", "config-cycle --print content.blocking.enabled")
 c.content.pdfjs = True
 c.content.javascript.clipboard = "access-paste"
 c.downloads.location.directory = "~/Downloads"
+
+# Hide finished downloads and bottom-bar messages after 3 seconds.
+c.downloads.remove_finished = 3000
+c.messages.timeout = 3000
