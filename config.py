@@ -40,6 +40,18 @@ config.set(
     "https://accounts.google.com/*",
 )
 
+# WhatsApp Web only offers voice/video calls to browsers it recognizes,
+# so claim the current Chrome there and allow the mic and camera.
+config.set(
+    "content.headers.user_agent",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "https://web.whatsapp.com/*",
+)
+config.set("content.media.audio_video_capture", True, "https://web.whatsapp.com/*")
+config.set("content.media.audio_capture", True, "https://web.whatsapp.com/*")
+config.set("content.media.video_capture", True, "https://web.whatsapp.com/*")
+
 # Ad blocker. Uses Brave's adblock engine when present, else hosts lists.
 # Run :adblock-update once after the first install to fetch the lists.
 c.content.blocking.enabled = True
